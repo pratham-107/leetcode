@@ -6,10 +6,7 @@ class Solution {
             hash[x]++;
         }
 
-        int max = 0;
-        for(int i=0; i<101; i++){
-            max = Math.max(max, hash[i]);
-        }
+        int max = Arrays.stream(hash).max().getAsInt();
 
         int count = 0;
         for(int i=0; i<101; i++){
